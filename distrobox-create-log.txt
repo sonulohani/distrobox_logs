@@ -1,0 +1,464 @@
+distrobox create -i docker.io/archlinux -n archlinux --verbose                                                              ✔  08:40:51 PM  
++ [ -z  ]
++ [ -z docker.io/archlinux ]
++ [ -z archlinux ]
++ [ -z archlinux ]
++ command -v podman
++ container_manager=podman
++ command -v podman
++ [ 1 -ne 0 ]
++ container_manager=podman --log-level debug
++ [ 0 -ne 0 ]
++ [ -z /home/sonul/.local/bin/distrobox-init ]
++ [ -z /home/sonul/.local/bin/distrobox-export ]
++ [ 0 -ne 0 ]
++ podman --log-level debug inspect --type container archlinux
++ [ -n  ]
++ [ 0 -eq 1 ]
++ podman --log-level debug inspect --type image docker.io/archlinux
++ printf Creating '%s' using image %s\t archlinux docker.io/archlinux
+Creating 'archlinux' using image docker.io/archlinux	+ generate_command
++ result_command=podman --log-level debug create
++ uname -n
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
++ [ 0 -eq 0 ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
++ [ 0 -eq 0 ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
++ [ 0 -eq 0 ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
++ [ -e /sys/fs/selinux ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
++ [ -L /dev/shm ]
++ nix_dirs=
+		/nix
+		/gnu
+		/run/current-system/sw
+	
++ [ -d /nix ]
++ [ -d /gnu ]
++ [ -d /run/current-system/sw ]
++ [ -n  ]
++ [ -n  ]
++ [ /home/sonul != /var/home/sonul ]
++ [ -d /var/home/sonul ]
++ [ -d /run/user/1000 ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave
++ [ 0 -eq 0 ]
++ NET_FILES=
+			/etc/hosts
+			/etc/resolv.conf
+		
++ [ -e /etc/hosts ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro
++ [ -e /etc/resolv.conf ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
++ echo podman --log-level debug
++ grep -q podman
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
+			--ulimit host
+			--annotation run.oci.keep_original_groups=1
+			--mount type=devpts,destination=/dev/pts
++ [ 0 -eq 1 ]
++ [ 0 -eq 0 ]
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
+			--ulimit host
+			--annotation run.oci.keep_original_groups=1
+			--mount type=devpts,destination=/dev/pts
+				--userns keep-id
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
+			--ulimit host
+			--annotation run.oci.keep_original_groups=1
+			--mount type=devpts,destination=/dev/pts
+				--userns keep-id 
++ result_command=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
+			--ulimit host
+			--annotation run.oci.keep_original_groups=1
+			--mount type=devpts,destination=/dev/pts
+				--userns keep-id  --entrypoint /usr/bin/entrypoint
+	docker.io/archlinux -v --name "sonul"
+		--user 1000
+		--group 1000
+		--home "/home/sonul"
+		--init "0"
+		--nvidia "0"
+		--pre-init-hooks ""
+		--additional-packages ""
+		-- ''
+		
++ printf %s podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
+			--ulimit host
+			--annotation run.oci.keep_original_groups=1
+			--mount type=devpts,destination=/dev/pts
+				--userns keep-id  --entrypoint /usr/bin/entrypoint
+	docker.io/archlinux -v --name "sonul"
+		--user 1000
+		--group 1000
+		--home "/home/sonul"
+		--init "0"
+		--nvidia "0"
+		--pre-init-hooks ""
+		--additional-packages ""
+		-- ''
+		
++ cmd=podman --log-level debug create
+		--hostname "archlinux.sonu-inspiron5570"
+		--name "archlinux"
+		--privileged
+		--security-opt label=disable
+		--user root:root
+			--ipc host
+			--network host
+			--pid host
+		--label "manager=distrobox"
+		--env "SHELL=/usr/bin/zsh"
+		--env "HOME=/home/sonul"
+		--volume /:/run/host:rslave
+		--volume /dev:/dev:rslave
+		--volume /sys:/sys:rslave
+		--volume /tmp:/tmp:rslave
+		--volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro
+		--volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro
+		--volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro
+		--volume "/home/sonul":"/home/sonul":rslave
+			--volume /var/log/journal
+			--volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro
+			--ulimit host
+			--annotation run.oci.keep_original_groups=1
+			--mount type=devpts,destination=/dev/pts
+				--userns keep-id  --entrypoint /usr/bin/entrypoint
+	docker.io/archlinux -v --name "sonul"
+		--user 1000
+		--group 1000
+		--home "/home/sonul"
+		--init "0"
+		--nvidia "0"
+		--pre-init-hooks ""
+		--additional-packages ""
+		-- ''
+		
++ eval podman --log-level debug create --hostname "archlinux.sonu-inspiron5570" --name "archlinux" --privileged --security-opt label=disable --user root:root --ipc host --network host --pid host --label "manager=distrobox" --env "SHELL=/usr/bin/zsh" --env "HOME=/home/sonul" --volume /:/run/host:rslave --volume /dev:/dev:rslave --volume /sys:/sys:rslave --volume /tmp:/tmp:rslave --volume "/home/sonul/.local/bin/distrobox-init":/usr/bin/entrypoint:ro --volume "/home/sonul/.local/bin/distrobox-export":/usr/bin/distrobox-export:ro --volume "/home/sonul/.local/bin/distrobox-host-exec":/usr/bin/distrobox-host-exec:ro --volume "/home/sonul":"/home/sonul":rslave --volume /var/log/journal --volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro --ulimit host --annotation run.oci.keep_original_groups=1 --mount type=devpts,destination=/dev/pts --userns keep-id --entrypoint /usr/bin/entrypoint docker.io/archlinux -v --name "sonul" --user 1000 --group 1000 --home "/home/sonul" --init "0" --nvidia "0" --pre-init-hooks "" --additional-packages "" -- ''
++ podman --log-level debug create --hostname archlinux.sonu-inspiron5570 --name archlinux --privileged --security-opt label=disable --user root:root --ipc host --network host --pid host --label manager=distrobox --env SHELL=/usr/bin/zsh --env HOME=/home/sonul --volume /:/run/host:rslave --volume /dev:/dev:rslave --volume /sys:/sys:rslave --volume /tmp:/tmp:rslave --volume /home/sonul/.local/bin/distrobox-init:/usr/bin/entrypoint:ro --volume /home/sonul/.local/bin/distrobox-export:/usr/bin/distrobox-export:ro --volume /home/sonul/.local/bin/distrobox-host-exec:/usr/bin/distrobox-host-exec:ro --volume /home/sonul:/home/sonul:rslave --volume /var/log/journal --volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro --ulimit host --annotation run.oci.keep_original_groups=1 --mount type=devpts,destination=/dev/pts --userns keep-id --entrypoint /usr/bin/entrypoint docker.io/archlinux -v --name sonul --user 1000 --group 1000 --home /home/sonul --init 0 --nvidia 0 --pre-init-hooks  --additional-packages  -- 
+INFO[0000] podman filtering at log level debug          
+DEBU[0000] Called create.PersistentPreRunE(podman --log-level debug create --hostname archlinux.sonu-inspiron5570 --name archlinux --privileged --security-opt label=disable --user root:root --ipc host --network host --pid host --label manager=distrobox --env SHELL=/usr/bin/zsh --env HOME=/home/sonul --volume /:/run/host:rslave --volume /dev:/dev:rslave --volume /sys:/sys:rslave --volume /tmp:/tmp:rslave --volume /home/sonul/.local/bin/distrobox-init:/usr/bin/entrypoint:ro --volume /home/sonul/.local/bin/distrobox-export:/usr/bin/distrobox-export:ro --volume /home/sonul/.local/bin/distrobox-host-exec:/usr/bin/distrobox-host-exec:ro --volume /home/sonul:/home/sonul:rslave --volume /var/log/journal --volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro --ulimit host --annotation run.oci.keep_original_groups=1 --mount type=devpts,destination=/dev/pts --userns keep-id --entrypoint /usr/bin/entrypoint docker.io/archlinux -v --name sonul --user 1000 --group 1000 --home /home/sonul --init 0 --nvidia 0 --pre-init-hooks  --additional-packages  -- ) 
+DEBU[0000] Merged system config "/usr/share/containers/containers.conf" 
+DEBU[0000] Using conmon: "/usr/bin/conmon"              
+DEBU[0000] Initializing boltdb state at /home/sonul/.local/share/containers/storage/libpod/bolt_state.db 
+DEBU[0000] Using graph driver vfs                       
+DEBU[0000] Using graph root /home/sonul/.local/share/containers/storage 
+DEBU[0000] Using run root /run/user/1000/containers     
+DEBU[0000] Using static dir /home/sonul/.local/share/containers/storage/libpod 
+DEBU[0000] Using tmp dir /run/user/1000/libpod/tmp      
+DEBU[0000] Using volume path /home/sonul/.local/share/containers/storage/volumes 
+DEBU[0000] Set libpod namespace to ""                   
+DEBU[0000] [graphdriver] trying provided driver "vfs"   
+DEBU[0000] Initializing event backend journald          
+DEBU[0000] Configured OCI runtime kata initialization failed: no valid executable found for OCI runtime kata: invalid argument 
+DEBU[0000] Configured OCI runtime runsc initialization failed: no valid executable found for OCI runtime runsc: invalid argument 
+DEBU[0000] Configured OCI runtime krun initialization failed: no valid executable found for OCI runtime krun: invalid argument 
+DEBU[0000] Configured OCI runtime runc initialization failed: no valid executable found for OCI runtime runc: invalid argument 
+DEBU[0000] Configured OCI runtime runj initialization failed: no valid executable found for OCI runtime runj: invalid argument 
+DEBU[0000] Using OCI runtime "/usr/bin/crun"            
+INFO[0000] Setting parallel job count to 25             
+DEBU[0000] Pulling image docker.io/archlinux (policy: missing) 
+DEBU[0000] Looking up image "docker.io/archlinux" in local containers storage 
+DEBU[0000] Normalized platform linux/amd64 to {amd64 linux  [] } 
+DEBU[0000] Trying "docker.io/library/archlinux:latest" ... 
+DEBU[0000] parsed reference into "[vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] Found image "docker.io/archlinux" as "docker.io/library/archlinux:latest" in local containers storage 
+DEBU[0000] Found image "docker.io/archlinux" as "docker.io/library/archlinux:latest" in local containers storage ([vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c) 
+DEBU[0000] exporting opaque data as blob "sha256:abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] Looking up image "docker.io/library/archlinux:latest" in local containers storage 
+DEBU[0000] Normalized platform linux/amd64 to {amd64 linux  [] } 
+DEBU[0000] Trying "docker.io/library/archlinux:latest" ... 
+DEBU[0000] parsed reference into "[vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] Found image "docker.io/library/archlinux:latest" as "docker.io/library/archlinux:latest" in local containers storage 
+DEBU[0000] Found image "docker.io/library/archlinux:latest" as "docker.io/library/archlinux:latest" in local containers storage ([vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c) 
+DEBU[0000] exporting opaque data as blob "sha256:abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] User mount /:/run/host options [rslave]      
+DEBU[0000] User mount /dev:/dev options [rslave]        
+DEBU[0000] User mount /sys:/sys options [rslave]        
+DEBU[0000] User mount /tmp:/tmp options [rslave]        
+DEBU[0000] User mount /home/sonul/.local/bin/distrobox-init:/usr/bin/entrypoint options [ro] 
+DEBU[0000] User mount /home/sonul/.local/bin/distrobox-export:/usr/bin/distrobox-export options [ro] 
+DEBU[0000] User mount /home/sonul/.local/bin/distrobox-host-exec:/usr/bin/distrobox-host-exec options [ro] 
+DEBU[0000] User mount /home/sonul:/home/sonul options [rslave] 
+DEBU[0000] User mount :/var/log/journal options []      
+DEBU[0000] User mount /run/user/1000:/run/user/1000 options [rslave] 
+DEBU[0000] User mount /etc/hosts:/etc/hosts options [ro] 
+DEBU[0000] User mount /etc/resolv.conf:/etc/resolv.conf options [ro] 
+DEBU[0000] Looking up image "docker.io/archlinux" in local containers storage 
+DEBU[0000] Normalized platform linux/amd64 to {amd64 linux  [] } 
+DEBU[0000] Trying "docker.io/library/archlinux:latest" ... 
+DEBU[0000] parsed reference into "[vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] Found image "docker.io/archlinux" as "docker.io/library/archlinux:latest" in local containers storage 
+DEBU[0000] Found image "docker.io/archlinux" as "docker.io/library/archlinux:latest" in local containers storage ([vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c) 
+DEBU[0000] exporting opaque data as blob "sha256:abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] Inspecting image abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c 
+DEBU[0000] exporting opaque data as blob "sha256:abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] exporting opaque data as blob "sha256:abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] Inspecting image abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c 
+DEBU[0000] Inspecting image abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c 
+DEBU[0000] Inspecting image abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c 
+DEBU[0000] using systemd mode: false                    
+DEBU[0000] setting container name archlinux             
+DEBU[0000] Loading seccomp profile from "/usr/share/containers/seccomp.json" 
+INFO[0000] Sysctl net.ipv4.ping_group_range=0 0 ignored in containers.conf, since Network Namespace set to host 
+DEBU[0000] Adding mount /proc                           
+DEBU[0000] Allocated lock 0 for container 66d527a5c138fa8262592569880e38c45215a382e186a2096b796e14aac637c2 
+DEBU[0000] parsed reference into "[vfs@/home/sonul/.local/share/containers/storage+/run/user/1000/containers]@abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0000] exporting opaque data as blob "sha256:abc56b88e36b9e33677b1ebf65bc238b80988c858ead662fe4b68249410fdf0c" 
+DEBU[0001] Created container "66d527a5c138fa8262592569880e38c45215a382e186a2096b796e14aac637c2" 
+DEBU[0001] Container "66d527a5c138fa8262592569880e38c45215a382e186a2096b796e14aac637c2" has work directory "/home/sonul/.local/share/containers/storage/vfs-containers/66d527a5c138fa8262592569880e38c45215a382e186a2096b796e14aac637c2/userdata" 
+DEBU[0001] Container "66d527a5c138fa8262592569880e38c45215a382e186a2096b796e14aac637c2" has run directory "/run/user/1000/containers/vfs-containers/66d527a5c138fa8262592569880e38c45215a382e186a2096b796e14aac637c2/userdata" 
+DEBU[0001] Creating new volume 098e884e61e2f2204c7cac9c7ce2b46b607d99bfad1584a402d0a9c30581479e for container 
+DEBU[0001] Validating options for local driver          
+DEBU[0001] Called create.PersistentPostRunE(podman --log-level debug create --hostname archlinux.sonu-inspiron5570 --name archlinux --privileged --security-opt label=disable --user root:root --ipc host --network host --pid host --label manager=distrobox --env SHELL=/usr/bin/zsh --env HOME=/home/sonul --volume /:/run/host:rslave --volume /dev:/dev:rslave --volume /sys:/sys:rslave --volume /tmp:/tmp:rslave --volume /home/sonul/.local/bin/distrobox-init:/usr/bin/entrypoint:ro --volume /home/sonul/.local/bin/distrobox-export:/usr/bin/distrobox-export:ro --volume /home/sonul/.local/bin/distrobox-host-exec:/usr/bin/distrobox-host-exec:ro --volume /home/sonul:/home/sonul:rslave --volume /var/log/journal --volume /run/user/1000:/run/user/1000:rslave --volume /etc/hosts:/etc/hosts:ro --volume /etc/resolv.conf:/etc/resolv.conf:ro --ulimit host --annotation run.oci.keep_original_groups=1 --mount type=devpts,destination=/dev/pts --userns keep-id --entrypoint /usr/bin/entrypoint docker.io/archlinux -v --name sonul --user 1000 --group 1000 --home /home/sonul --init 0 --nvidia 0 --pre-init-hooks  --additional-packages  -- ) 
++ printf \033[32m [ OK ]\n\033[0mDistrobox '%s' successfully created.\n archlinux
+ [ OK ]
+Distrobox 'archlinux' successfully created.
++ printf To enter, run:\n\n
+To enter, run:
+
++ [ 0 -eq 1 ]
++ [ 1000 -eq 0 ]
++ [ 0 -eq 0 ]
++ printf distrobox enter %s\n\n archlinux
++ [ 0 -eq 0 ]
++ [ 1 -ne 0 ]
++ /home/sonul/.local/bin/distrobox-generate-entry archlinux
++ exit 0

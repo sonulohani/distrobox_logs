@@ -1,0 +1,975 @@
+podman logs -f archlinux                                                                                                                   ✔  08:42:49 PM  
+distrobox: Installing basic packages...
++ '[' -n '' ']'
++ printf 'distrobox: Installing basic packages...\n'
+++ basename /usr/bin/zsh
++ shell_pkg=zsh
++ '[' zsh = ash ']'
++ '[' 0 -ne 0 ']'
++ command -v find
+/usr/sbin/find
++ command -v mount
+/usr/sbin/mount
++ command -v passwd
+/usr/sbin/passwd
++ command -v sudo
++ command -v apk
++ command -v apt-get
++ command -v dnf
++ command -v emerge
++ command -v microdnf
++ command -v pacman
+/usr/sbin/pacman
++ '[' 0 -ne 0 ']'
++ sed -i 's|NoExtract.*||g' /etc/pacman.conf
++ sed -i 's|NoProgressBar.*||g' /etc/pacman.conf
++ pacman --noconfirm -Syyu
+:: Synchronizing package databases...
+ core downloading...
+ extra downloading...
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (11)                  Old Version  New Version  Net Change  Download Size
+
+core/ca-certificates-mozilla  3.89.1-1     3.90-1         0.00 MiB       0.35 MiB
+core/dbus                     1.14.6-2     1.14.8-1       0.00 MiB       0.30 MiB
+core/libnghttp2               1.53.0-1     1.54.0-1       0.00 MiB       0.09 MiB
+extra/libutempter                          1.2.1-3        0.03 MiB       0.01 MiB
+core/libxcrypt                4.4.33-1     4.4.35-1       0.00 MiB       0.08 MiB
+core/openssl                  3.0.9-1      3.1.1-1        0.71 MiB       5.14 MiB
+core/systemd                  253.4-1      253.5-1        0.31 MiB       7.28 MiB
+core/systemd-libs             253.4-1      253.5-1        0.04 MiB       1.00 MiB
+core/systemd-sysvcompat       253.4-1      253.5-1        0.00 MiB       0.01 MiB
+core/util-linux               2.39-4       2.39-8         0.02 MiB       2.67 MiB
+core/util-linux-libs          2.39-4       2.39-8         0.00 MiB       0.43 MiB
+
+Total Download Size:   17.36 MiB
+Total Installed Size:  59.52 MiB
+Net Upgrade Size:       1.12 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ systemd-253.5-1-x86_64 downloading...
+ openssl-3.1.1-1-x86_64 downloading...
+ util-linux-2.39-8-x86_64 downloading...
+ systemd-libs-253.5-1-x86_64 downloading...
+ util-linux-libs-2.39-8-x86_64 downloading...
+ ca-certificates-mozilla-3.90-1-x86_64 downloading...
+ dbus-1.14.8-1-x86_64 downloading...
+ libnghttp2-1.54.0-1-x86_64 downloading...
+ libxcrypt-4.4.35-1-x86_64 downloading...
+ libutempter-1.2.1-3-x86_64 downloading...
+ systemd-sysvcompat-253.5-1-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+upgrading openssl...
+upgrading libxcrypt...
+upgrading util-linux-libs...
+upgrading systemd-libs...
+upgrading ca-certificates-mozilla...
+upgrading dbus...
+upgrading libnghttp2...
+installing libutempter...
+upgrading util-linux...
+upgrading systemd...
+upgrading systemd-sysvcompat...
+:: Running post-transaction hooks...
+( 1/10) Creating system user accounts...
+( 2/10) Updating journal message catalog...
+( 3/10) Reloading system manager configuration...
+Failed to check for chroot() environment: Permission denied
+  Skipped: Current root is not booted.
+( 4/10) Updating udev hardware database...
+( 5/10) Applying kernel sysctl settings...
+Failed to check for chroot() environment: Permission denied
+  Skipped: Current root is not booted.
+( 6/10) Creating temporary files...
+/usr/lib/tmpfiles.d/journal-nocow.conf:26: Failed to replace specifiers in '/var/log/journal/%m': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:23: Failed to replace specifiers in '/run/log/journal/%m': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:25: Failed to replace specifiers in '/run/log/journal/%m': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:26: Failed to replace specifiers in '/run/log/journal/%m/*.journal*': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:29: Failed to replace specifiers in '/var/log/journal/%m': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:30: Failed to replace specifiers in '/var/log/journal/%m/system.journal': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:32: Failed to replace specifiers in '/var/log/journal/%m': No such file or directory
+/usr/lib/tmpfiles.d/systemd.conf:33: Failed to replace specifiers in '/var/log/journal/%m/system.journal': No such file or directory
+fchownat() of /tmp failed: Operation not permitted
+fchownat() of /dev/snd/seq failed: Operation not permitted
+fchownat() of /dev/snd/timer failed: Operation not permitted
+fchownat() of /dev/loop-control failed: Operation not permitted
+fchownat() of /dev/kvm failed: Operation not permitted
+fchownat() of /dev/vhost-net failed: Operation not permitted
+fchownat() of /dev/vhost-vsock failed: Operation not permitted
+fchownat() of /sys/kernel/security/tpm0/binary_bios_measurements failed: Operation not permitted
+fchownat() of /sys/kernel/security/ima/binary_runtime_measurements failed: Operation not permitted
+( 7/10) Reloading device manager configuration...
+error: command failed to execute correctly
+Failed to check for chroot() environment: Permission denied
+  Skipped: Device manager is not running.
+( 8/10) Arming ConditionNeedsUpdate...
+( 9/10) Rebuilding certificate stores...
+(10/10) Reloading system bus configuration...
+Failed to check for chroot() environment: Permission denied
+  Skipped: Current root is not booted.
++ pacman -Sy --noconfirm zsh
+:: Synchronizing package databases...
+ core downloading...
+ extra downloading...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (2)  New Version  Net Change  Download Size
+
+core/pcre    8.45-3         3.49 MiB       0.97 MiB
+extra/zsh    5.9-3          6.62 MiB       2.23 MiB
+
+Total Download Size:    3.20 MiB
+Total Installed Size:  10.11 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ zsh-5.9-3-x86_64 downloading...
+ pcre-8.45-3-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+installing pcre...
+installing zsh...
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...
++ deps='
+			zsh
+			bc
+			curl
+			diffutils
+			findutils
+			gnupg
+			less
+			lsof
+			ncurses
+			pinentry
+			procps-ng
+			shadow
+			sudo
+			time
+			util-linux
+			wget
+			mesa
+			opengl-driver
+			vulkan-intel
+			vte-common
+			vulkan-radeon
+		'
++ install_pkg=
++ for dep in ${deps}
++ pacman -Qs zsh
++ install_pkg=' zsh'
++ for dep in ${deps}
++ pacman -Qs bc
++ install_pkg=' zsh bc'
++ for dep in ${deps}
++ pacman -Qs curl
++ install_pkg=' zsh bc curl'
++ for dep in ${deps}
++ pacman -Qs diffutils
++ for dep in ${deps}
++ pacman -Qs findutils
++ install_pkg=' zsh bc curl findutils'
++ for dep in ${deps}
++ pacman -Qs gnupg
++ install_pkg=' zsh bc curl findutils gnupg'
++ for dep in ${deps}
++ pacman -Qs less
++ install_pkg=' zsh bc curl findutils gnupg less'
++ for dep in ${deps}
++ pacman -Qs lsof
++ for dep in ${deps}
++ pacman -Qs ncurses
++ install_pkg=' zsh bc curl findutils gnupg less ncurses'
++ for dep in ${deps}
++ pacman -Qs pinentry
++ install_pkg=' zsh bc curl findutils gnupg less ncurses pinentry'
++ for dep in ${deps}
++ pacman -Qs procps-ng
++ install_pkg=' zsh bc curl findutils gnupg less ncurses pinentry procps-ng'
++ for dep in ${deps}
++ pacman -Qs shadow
++ install_pkg=' zsh bc curl findutils gnupg less ncurses pinentry procps-ng shadow'
++ for dep in ${deps}
++ pacman -Qs sudo
++ for dep in ${deps}
++ pacman -Qs time
++ install_pkg=' zsh bc curl findutils gnupg less ncurses pinentry procps-ng shadow time'
++ for dep in ${deps}
++ pacman -Qs util-linux
++ install_pkg=' zsh bc curl findutils gnupg less ncurses pinentry procps-ng shadow time util-linux'
++ for dep in ${deps}
++ pacman -Qs wget
++ for dep in ${deps}
++ pacman -Qs mesa
++ for dep in ${deps}
++ pacman -Qs opengl-driver
++ for dep in ${deps}
++ pacman -Qs vulkan-intel
++ for dep in ${deps}
++ pacman -Qs vte-common
++ for dep in ${deps}
++ pacman -Qs vulkan-radeon
++ pacman -Sy --noconfirm zsh bc curl findutils gnupg less ncurses pinentry procps-ng shadow time util-linux
+:: Synchronizing package databases...
+ core downloading...
+ extra downloading...
+resolving dependencies...
+warning: zsh-5.9-3 is up to date -- reinstalling
+warning: curl-8.1.2-1 is up to date -- reinstalling
+warning: findutils-4.9.0-3 is up to date -- reinstalling
+warning: gnupg-2.2.41-1 is up to date -- reinstalling
+warning: less-1:633-1 is up to date -- reinstalling
+warning: ncurses-6.4_20230520-1 is up to date -- reinstalling
+warning: pinentry-1.2.1-1 is up to date -- reinstalling
+warning: procps-ng-3.3.17-1 is up to date -- reinstalling
+warning: shadow-4.13-2 is up to date -- reinstalling
+warning: util-linux-2.39-8 is up to date -- reinstalling
+looking for conflicting packages...
+
+Package (12)     Old Version     New Version     Net Change  Download Size
+
+extra/bc                         1.07.1-4          0.17 MiB       0.09 MiB
+core/curl        8.1.2-1         8.1.2-1           0.00 MiB       1.16 MiB
+core/findutils   4.9.0-3         4.9.0-3           0.00 MiB       0.41 MiB
+core/gnupg       2.2.41-1        2.2.41-1          0.00 MiB       2.36 MiB
+core/less        1:633-1         1:633-1           0.00 MiB       0.13 MiB
+core/ncurses     6.4_20230520-1  6.4_20230520-1    0.00 MiB       1.16 MiB
+core/pinentry    1.2.1-1         1.2.1-1           0.00 MiB       0.13 MiB
+core/procps-ng   3.3.17-1        3.3.17-1          0.00 MiB       0.50 MiB
+core/shadow      4.13-2          4.13-2            0.00 MiB       1.17 MiB
+extra/time                       1.9-4             0.04 MiB       0.02 MiB
+core/util-linux  2.39-8          2.39-8            0.00 MiB               
+extra/zsh        5.9-3           5.9-3             0.00 MiB               
+
+Total Download Size:    7.12 MiB
+Total Installed Size:  42.02 MiB
+Net Upgrade Size:       0.21 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ gnupg-2.2.41-1-x86_64 downloading...
+ shadow-4.13-2-x86_64 downloading...
+ curl-8.1.2-1-x86_64 downloading...
+ ncurses-6.4_20230520-1-x86_64 downloading...
+ procps-ng-3.3.17-1-x86_64 downloading...
+ findutils-4.9.0-3-x86_64 downloading...
+ pinentry-1.2.1-1-x86_64 downloading...
+ less-1:633-1-x86_64 downloading...
+ bc-1.07.1-4-x86_64 downloading...
+ time-1.9-4-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+reinstalling ncurses...
+reinstalling zsh...
+installing bc...
+reinstalling findutils...
+reinstalling curl...
+reinstalling pinentry...
+reinstalling gnupg...
+reinstalling less...
+reinstalling procps-ng...
+reinstalling shadow...
+installing time...
+reinstalling util-linux...
+:: Running post-transaction hooks...
+(1/4) Creating system user accounts...
+(2/4) Reloading system manager configuration...
+Failed to check for chroot() environment: Permission denied
+  Skipped: Current root is not booted.
+(3/4) Reloading device manager configuration...
+Failed to check for chroot() environment: Permission denied
+  Skipped: Device manager is not running.
+(4/4) Arming ConditionNeedsUpdate...
++ '[' -n '' ']'
++ '[' zsh = ash ']'
+++ command -v zsh
++ SHELL=/usr/sbin/zsh
++ touch /run/.containersetupdone
++ /usr/bin/distrobox-host-exec -Y test
+The name org.freedesktop.Flatpak was not provided by any .service files
++ :
++ command -v xdg-open
++ mkdir -p /usr/local/bin/
++ ln -s /usr/bin/distrobox-host-exec /usr/local/bin/xdg-open
+distrobox: Setting up read-only mounts...
++ printf 'distrobox: Setting up read-only mounts...\n'
++ HOST_MOUNTS_RO='
+	/etc/localtime
+	/var/lib/flatpak
+	/var/lib/systemd/coredump
+	/var/log/journal'
++ for host_mount_ro in ${HOST_MOUNTS_RO}
+++ get_locked_mount_flags /run/host/etc/localtime
+++ source_dir=/run/host/etc/localtime
+++ prev_dir=
+++ locked_flags=
+++ '[' -d /run/host/etc/localtime ']'
+++ return 0
++ locked_flags=
++ mount_bind /run/host/etc/localtime /etc/localtime ro
++ source_dir=/run/host/etc/localtime
++ target_dir=/etc/localtime
++ mount_flags=
++ '[' 3 -gt 2 ']'
++ mount_flags=ro
++ '[' -d /run/host/etc/localtime ']'
++ '[' -f /run/host/etc/localtime ']'
++ '[' -e /etc/localtime ']'
++ '[' -d /run/host/etc/localtime ']'
++ '[' -f /run/host/etc/localtime ']'
+++ dirname /etc/localtime
++ mkdir -p /etc
++ touch /etc/localtime
++ '[' ro = '' ']'
++ mount --rbind -o ro /run/host/etc/localtime /etc/localtime
++ return 0
++ for host_mount_ro in ${HOST_MOUNTS_RO}
+++ get_locked_mount_flags /run/host/var/lib/flatpak
+++ source_dir=/run/host/var/lib/flatpak
+++ prev_dir=
+++ locked_flags=
+++ '[' -d /run/host/var/lib/flatpak ']'
+++ true
++++ findmnt --noheadings --output OPTIONS --target /run/host/var/lib/flatpak
+++ flags=rw,noatime,discard
+++ break
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ echo ''
++ locked_flags=
++ mount_bind /run/host/var/lib/flatpak /var/lib/flatpak ro
++ source_dir=/run/host/var/lib/flatpak
++ target_dir=/var/lib/flatpak
++ mount_flags=
++ '[' 3 -gt 2 ']'
++ mount_flags=ro
++ '[' -d /run/host/var/lib/flatpak ']'
++ '[' -e /var/lib/flatpak ']'
++ '[' -d /run/host/var/lib/flatpak ']'
++ mkdir -p /var/lib/flatpak
++ '[' ro = '' ']'
++ mount --rbind -o ro /run/host/var/lib/flatpak /var/lib/flatpak
++ return 0
++ for host_mount_ro in ${HOST_MOUNTS_RO}
+++ get_locked_mount_flags /run/host/var/lib/systemd/coredump
+++ source_dir=/run/host/var/lib/systemd/coredump
+++ prev_dir=
+++ locked_flags=
+++ '[' -d /run/host/var/lib/systemd/coredump ']'
+++ true
++++ findmnt --noheadings --output OPTIONS --target /run/host/var/lib/systemd/coredump
+++ flags=rw,noatime,discard
+++ break
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ echo ''
++ locked_flags=
++ mount_bind /run/host/var/lib/systemd/coredump /var/lib/systemd/coredump ro
++ source_dir=/run/host/var/lib/systemd/coredump
++ target_dir=/var/lib/systemd/coredump
++ mount_flags=
++ '[' 3 -gt 2 ']'
++ mount_flags=ro
++ '[' -d /run/host/var/lib/systemd/coredump ']'
++ '[' -e /var/lib/systemd/coredump ']'
++ findmnt /var/lib/systemd/coredump
++ '[' -d /run/host/var/lib/systemd/coredump ']'
++ mkdir -p /var/lib/systemd/coredump
++ '[' ro = '' ']'
++ mount --rbind -o ro /run/host/var/lib/systemd/coredump /var/lib/systemd/coredump
++ return 0
++ for host_mount_ro in ${HOST_MOUNTS_RO}
+++ get_locked_mount_flags /run/host/var/log/journal
+++ source_dir=/run/host/var/log/journal
+++ prev_dir=
+++ locked_flags=
+++ '[' -d /run/host/var/log/journal ']'
+++ true
++++ findmnt --noheadings --output OPTIONS --target /run/host/var/log/journal
+++ flags=rw,noatime,discard
+++ break
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ for flag in nodev noexec nosuid
+++ case ",${flags}," in
+++ :
+++ echo ''
++ locked_flags=
++ mount_bind /run/host/var/log/journal /var/log/journal ro
++ source_dir=/run/host/var/log/journal
++ target_dir=/var/log/journal
++ mount_flags=
++ '[' 3 -gt 2 ']'
++ mount_flags=ro
++ '[' -d /run/host/var/log/journal ']'
++ '[' -e /var/log/journal ']'
++ findmnt /var/log/journal
++ umount /var/log/journal
++ '[' -d /run/host/var/log/journal ']'
++ mkdir -p /var/log/journal
++ '[' ro = '' ']'
++ mount --rbind -o ro /run/host/var/log/journal /var/log/journal
++ return 0
+distrobox: Setting up read-write mounts...
++ printf 'distrobox: Setting up read-write mounts...\n'
++ HOST_MOUNTS='
+	/etc/host.conf
+	/etc/machine-id
+	/media
+	/mnt
+	/run/libvirt
+	/run/media
+	/run/systemd/journal
+	/run/systemd/seats
+	/run/systemd/sessions
+	/run/systemd/users
+	/run/systemd/resolve/
+	/run/netconfig/
+	/run/udev
+	/srv
+	/var/lib/libvirt
+	/var/mnt'
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/etc/host.conf /etc/host.conf
++ source_dir=/run/host/etc/host.conf
++ target_dir=/etc/host.conf
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/etc/host.conf ']'
++ '[' -f /run/host/etc/host.conf ']'
++ '[' -e /etc/host.conf ']'
++ findmnt /etc/host.conf
++ '[' -d /run/host/etc/host.conf ']'
++ '[' -f /run/host/etc/host.conf ']'
+++ dirname /etc/host.conf
++ mkdir -p /etc
++ touch /etc/host.conf
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/etc/host.conf /etc/host.conf
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/etc/machine-id /etc/machine-id
++ source_dir=/run/host/etc/machine-id
++ target_dir=/etc/machine-id
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/etc/machine-id ']'
++ '[' -f /run/host/etc/machine-id ']'
++ '[' -e /etc/machine-id ']'
++ '[' -d /run/host/etc/machine-id ']'
++ '[' -f /run/host/etc/machine-id ']'
+++ dirname /etc/machine-id
++ mkdir -p /etc
++ touch /etc/machine-id
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/etc/machine-id /etc/machine-id
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/media /media
++ source_dir=/run/host/media
++ target_dir=/media
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/media ']'
++ '[' -e /media ']'
++ '[' -d /run/host/media ']'
++ mkdir -p /media
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/media /media
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/mnt /mnt
++ source_dir=/run/host/mnt
++ target_dir=/mnt
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/mnt ']'
++ '[' -e /mnt ']'
++ findmnt /mnt
++ '[' -d /run/host/mnt ']'
++ mkdir -p /mnt
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/mnt /mnt
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/libvirt /run/libvirt
++ source_dir=/run/host/run/libvirt
++ target_dir=/run/libvirt
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/libvirt ']'
++ '[' -f /run/host/run/libvirt ']'
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/media /run/media
++ source_dir=/run/host/run/media
++ target_dir=/run/media
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/media ']'
++ '[' -f /run/host/run/media ']'
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/systemd/journal /run/systemd/journal
++ source_dir=/run/host/run/systemd/journal
++ target_dir=/run/systemd/journal
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/systemd/journal ']'
++ '[' -e /run/systemd/journal ']'
++ '[' -d /run/host/run/systemd/journal ']'
++ mkdir -p /run/systemd/journal
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/run/systemd/journal /run/systemd/journal
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/systemd/seats /run/systemd/seats
++ source_dir=/run/host/run/systemd/seats
++ target_dir=/run/systemd/seats
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/systemd/seats ']'
++ '[' -e /run/systemd/seats ']'
++ findmnt /run/systemd/seats
++ '[' -d /run/host/run/systemd/seats ']'
++ mkdir -p /run/systemd/seats
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/run/systemd/seats /run/systemd/seats
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/systemd/sessions /run/systemd/sessions
++ source_dir=/run/host/run/systemd/sessions
++ target_dir=/run/systemd/sessions
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/systemd/sessions ']'
++ '[' -e /run/systemd/sessions ']'
++ findmnt /run/systemd/sessions
++ '[' -d /run/host/run/systemd/sessions ']'
++ mkdir -p /run/systemd/sessions
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/run/systemd/sessions /run/systemd/sessions
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/systemd/users /run/systemd/users
++ source_dir=/run/host/run/systemd/users
++ target_dir=/run/systemd/users
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/systemd/users ']'
++ '[' -e /run/systemd/users ']'
++ findmnt /run/systemd/users
++ '[' -d /run/host/run/systemd/users ']'
++ mkdir -p /run/systemd/users
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/run/systemd/users /run/systemd/users
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/systemd/resolve/ /run/systemd/resolve/
++ source_dir=/run/host/run/systemd/resolve/
++ target_dir=/run/systemd/resolve/
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/systemd/resolve/ ']'
++ '[' -f /run/host/run/systemd/resolve/ ']'
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/netconfig/ /run/netconfig/
++ source_dir=/run/host/run/netconfig/
++ target_dir=/run/netconfig/
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/netconfig/ ']'
++ '[' -f /run/host/run/netconfig/ ']'
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/run/udev /run/udev
++ source_dir=/run/host/run/udev
++ target_dir=/run/udev
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/run/udev ']'
++ '[' -e /run/udev ']'
++ '[' -d /run/host/run/udev ']'
++ mkdir -p /run/udev
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/run/udev /run/udev
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/srv /srv
++ source_dir=/run/host/srv
++ target_dir=/srv
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/srv ']'
++ '[' -e /srv ']'
++ findmnt /srv
++ '[' -d /run/host/srv ']'
++ mkdir -p /srv
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/srv /srv
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/var/lib/libvirt /var/lib/libvirt
++ source_dir=/run/host/var/lib/libvirt
++ target_dir=/var/lib/libvirt
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/var/lib/libvirt ']'
++ '[' -f /run/host/var/lib/libvirt ']'
++ return 0
++ for host_mount in ${HOST_MOUNTS}
++ mount_bind /run/host/var/mnt /var/mnt
++ source_dir=/run/host/var/mnt
++ target_dir=/var/mnt
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/var/mnt ']'
++ '[' -f /run/host/var/mnt ']'
++ return 0
++ HOST_MOUNTS_RO_INIT='
+	/etc/localtime
+	/run/systemd/journal
+	/run/systemd/resolve
+	/run/systemd/seats
+	/run/systemd/sessions
+	/run/systemd/users
+	/var/lib/systemd/coredump
+	/var/log/journal'
+distrobox: Setting up host's sockets integration...
++ '[' -e /var/home/sonul ']'
++ printf 'distrobox: Setting up host'\''s sockets integration...\n'
+++ find /run/host/run -name user -prune -o -path /run/host/run/media -prune -o -name nscd -prune -o -name bees -prune -o -name system_bus_socket -prune -o -type s -print
+++ :
++ host_sockets='/run/host/run/wpa_supplicant/p2p-dev-wlp3s0
+/run/host/run/wpa_supplicant/wlp3s0
+/run/host/run/uuidd/request
+/run/host/run/cups/cups.sock
+/run/host/run/avahi-daemon/socket
+/run/host/run/systemd/journal/io.systemd.journal
+/run/host/run/systemd/journal/stdout
+/run/host/run/systemd/journal/socket
+/run/host/run/systemd/journal/dev-log
+/run/host/run/systemd/fsck.progress
+/run/host/run/systemd/io.system.ManagedOOM
+/run/host/run/systemd/userdb/io.systemd.DynamicUser
+/run/host/run/systemd/private
+/run/host/run/systemd/notify
+/run/host/run/systemd/inaccessible/sock
+/run/host/run/udev/control'
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/wpa_supplicant/p2p-dev-wlp3s0
+++ sed 's|/run/host||g'
++ container_socket=/run/wpa_supplicant/p2p-dev-wlp3s0
++ '[' '!' -S /run/wpa_supplicant/p2p-dev-wlp3s0 ']'
++ '[' '!' -L /run/wpa_supplicant/p2p-dev-wlp3s0 ']'
++ rm -f /run/wpa_supplicant/p2p-dev-wlp3s0
+++ dirname /run/wpa_supplicant/p2p-dev-wlp3s0
++ mkdir -p /run/wpa_supplicant
++ ln -s /run/host/run/wpa_supplicant/p2p-dev-wlp3s0 /run/wpa_supplicant/p2p-dev-wlp3s0
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/wpa_supplicant/wlp3s0
+++ sed 's|/run/host||g'
++ container_socket=/run/wpa_supplicant/wlp3s0
++ '[' '!' -S /run/wpa_supplicant/wlp3s0 ']'
++ '[' '!' -L /run/wpa_supplicant/wlp3s0 ']'
++ rm -f /run/wpa_supplicant/wlp3s0
+++ dirname /run/wpa_supplicant/wlp3s0
++ mkdir -p /run/wpa_supplicant
++ ln -s /run/host/run/wpa_supplicant/wlp3s0 /run/wpa_supplicant/wlp3s0
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/uuidd/request
+++ sed 's|/run/host||g'
++ container_socket=/run/uuidd/request
++ '[' '!' -S /run/uuidd/request ']'
++ '[' '!' -L /run/uuidd/request ']'
++ rm -f /run/uuidd/request
+++ dirname /run/uuidd/request
++ mkdir -p /run/uuidd
++ ln -s /run/host/run/uuidd/request /run/uuidd/request
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/cups/cups.sock
+++ sed 's|/run/host||g'
++ container_socket=/run/cups/cups.sock
++ '[' '!' -S /run/cups/cups.sock ']'
++ '[' '!' -L /run/cups/cups.sock ']'
++ rm -f /run/cups/cups.sock
+++ dirname /run/cups/cups.sock
++ mkdir -p /run/cups
++ ln -s /run/host/run/cups/cups.sock /run/cups/cups.sock
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/avahi-daemon/socket
+++ sed 's|/run/host||g'
++ container_socket=/run/avahi-daemon/socket
++ '[' '!' -S /run/avahi-daemon/socket ']'
++ '[' '!' -L /run/avahi-daemon/socket ']'
++ rm -f /run/avahi-daemon/socket
+++ dirname /run/avahi-daemon/socket
++ mkdir -p /run/avahi-daemon
++ ln -s /run/host/run/avahi-daemon/socket /run/avahi-daemon/socket
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/journal/io.systemd.journal
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/journal/io.systemd.journal
++ '[' '!' -S /run/systemd/journal/io.systemd.journal ']'
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/journal/stdout
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/journal/stdout
++ '[' '!' -S /run/systemd/journal/stdout ']'
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/journal/socket
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/journal/socket
++ '[' '!' -S /run/systemd/journal/socket ']'
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/journal/dev-log
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/journal/dev-log
++ '[' '!' -S /run/systemd/journal/dev-log ']'
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/fsck.progress
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/fsck.progress
++ '[' '!' -S /run/systemd/fsck.progress ']'
++ '[' '!' -L /run/systemd/fsck.progress ']'
++ rm -f /run/systemd/fsck.progress
+++ dirname /run/systemd/fsck.progress
++ mkdir -p /run/systemd
++ ln -s /run/host/run/systemd/fsck.progress /run/systemd/fsck.progress
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/io.system.ManagedOOM
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/io.system.ManagedOOM
++ '[' '!' -S /run/systemd/io.system.ManagedOOM ']'
++ '[' '!' -L /run/systemd/io.system.ManagedOOM ']'
++ rm -f /run/systemd/io.system.ManagedOOM
+++ dirname /run/systemd/io.system.ManagedOOM
++ mkdir -p /run/systemd
++ ln -s /run/host/run/systemd/io.system.ManagedOOM /run/systemd/io.system.ManagedOOM
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/userdb/io.systemd.DynamicUser
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/userdb/io.systemd.DynamicUser
++ '[' '!' -S /run/systemd/userdb/io.systemd.DynamicUser ']'
++ '[' '!' -L /run/systemd/userdb/io.systemd.DynamicUser ']'
++ rm -f /run/systemd/userdb/io.systemd.DynamicUser
+++ dirname /run/systemd/userdb/io.systemd.DynamicUser
++ mkdir -p /run/systemd/userdb
++ ln -s /run/host/run/systemd/userdb/io.systemd.DynamicUser /run/systemd/userdb/io.systemd.DynamicUser
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/private
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/private
++ '[' '!' -S /run/systemd/private ']'
++ '[' '!' -L /run/systemd/private ']'
++ rm -f /run/systemd/private
+++ dirname /run/systemd/private
++ mkdir -p /run/systemd
++ ln -s /run/host/run/systemd/private /run/systemd/private
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/notify
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/notify
++ '[' '!' -S /run/systemd/notify ']'
++ '[' '!' -L /run/systemd/notify ']'
++ rm -f /run/systemd/notify
+++ dirname /run/systemd/notify
++ mkdir -p /run/systemd
++ ln -s /run/host/run/systemd/notify /run/systemd/notify
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/systemd/inaccessible/sock
+++ sed 's|/run/host||g'
++ container_socket=/run/systemd/inaccessible/sock
++ '[' '!' -S /run/systemd/inaccessible/sock ']'
++ '[' '!' -L /run/systemd/inaccessible/sock ']'
++ rm -f /run/systemd/inaccessible/sock
+++ dirname /run/systemd/inaccessible/sock
++ mkdir -p /run/systemd/inaccessible
++ ln -s /run/host/run/systemd/inaccessible/sock /run/systemd/inaccessible/sock
++ for host_socket in ${host_sockets}
+++ printf %s /run/host/run/udev/control
+++ sed 's|/run/host||g'
++ container_socket=/run/udev/control
++ '[' '!' -S /run/udev/control ']'
+distrobox: Integrating host's themes, icons, fonts...
++ '[' 0 -eq 1 ']'
++ printf 'distrobox: Integrating host'\''s themes, icons, fonts...\n'
++ mount_bind /run/host/usr/share/themes /usr/local/share/themes
++ source_dir=/run/host/usr/share/themes
++ target_dir=/usr/local/share/themes
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/usr/share/themes ']'
++ '[' -e /usr/local/share/themes ']'
++ '[' -d /run/host/usr/share/themes ']'
++ mkdir -p /usr/local/share/themes
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/usr/share/themes /usr/local/share/themes
++ return 0
++ mount_bind /run/host/usr/share/icons /usr/local/share/icons
++ source_dir=/run/host/usr/share/icons
++ target_dir=/usr/local/share/icons
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/usr/share/icons ']'
++ '[' -e /usr/local/share/icons ']'
++ '[' -d /run/host/usr/share/icons ']'
++ mkdir -p /usr/local/share/icons
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/usr/share/icons /usr/local/share/icons
++ return 0
++ mount_bind /run/host/usr/share/fonts /usr/local/share/fonts
++ source_dir=/run/host/usr/share/fonts
++ target_dir=/usr/local/share/fonts
++ mount_flags=
++ '[' 2 -gt 2 ']'
++ '[' -d /run/host/usr/share/fonts ']'
++ '[' -e /usr/local/share/fonts ']'
++ '[' -d /run/host/usr/share/fonts ']'
++ mkdir -p /usr/local/share/fonts
++ '[' '' = '' ']'
++ mount_flags=rslave
++ mount --rbind -o rslave /run/host/usr/share/fonts /usr/local/share/fonts
++ return 0
+distrobox: Setting up package manager exceptions...
++ printf 'distrobox: Setting up package manager exceptions...\n'
++ '[' -d /usr/lib/rpm/macros.d/ ']'
++ '[' -d /etc/dpkg/dpkg.cfg.d/ ']'
+distrobox: Setting up pacman exceptions...
++ '[' -d /usr/share/libalpm/scripts ']'
++ printf 'distrobox: Setting up pacman exceptions...\n'
++ printf '#!/bin/sh\n'
++ printf '#!/bin/sh\n'
++ printf '#!/bin/sh\n'
++ chmod +x /usr/share/libalpm/scripts/00_distrobox_pre_hook.sh /usr/share/libalpm/scripts/01_distrobox_post_hook.sh /usr/share/libalpm/scripts/02_distrobox_post_hook.sh
++ for net_mount in ${HOST_MOUNTS_RO}
++ printf 'if findmnt %s >/dev/null; then umount %s; fi\n' /etc/localtime /etc/localtime
++ printf 'if [ -e /run/host/%s ]; then mount --rbind -o ro /run/host/%s %s; fi\n' /etc/localtime /etc/localtime /etc/localtime
++ for net_mount in ${HOST_MOUNTS_RO}
++ printf 'if findmnt %s >/dev/null; then umount %s; fi\n' /var/lib/flatpak /var/lib/flatpak
++ printf 'if [ -e /run/host/%s ]; then mount --rbind -o ro /run/host/%s %s; fi\n' /var/lib/flatpak /var/lib/flatpak /var/lib/flatpak
++ for net_mount in ${HOST_MOUNTS_RO}
++ printf 'if findmnt %s >/dev/null; then umount %s; fi\n' /var/lib/systemd/coredump /var/lib/systemd/coredump
++ printf 'if [ -e /run/host/%s ]; then mount --rbind -o ro /run/host/%s %s; fi\n' /var/lib/systemd/coredump /var/lib/systemd/coredump /var/lib/systemd/coredump
++ for net_mount in ${HOST_MOUNTS_RO}
++ printf 'if findmnt %s >/dev/null; then umount %s; fi\n' /var/log/journal /var/log/journal
++ printf 'if [ -e /run/host/%s ]; then mount --rbind -o ro /run/host/%s %s; fi\n' /var/log/journal /var/log/journal /var/log/journal
++ cat
+distrobox: Setting up pacman hooks...
++ printf 'distrobox: Setting up pacman hooks...\n'
++ find '/usr/share/libalpm/hooks/*distrobox*' -delete
+find: ‘/usr/share/libalpm/hooks/*distrobox*’: No such file or directory
++ :
++ for hook in 00_distrobox_pre_hook 01_distrobox_post_hook 02_distrobox_post_hook
++ when=PostTransaction
++ '[' -z '' ']'
++ when=PreTransaction
++ cat
++ for hook in 00_distrobox_pre_hook 01_distrobox_post_hook 02_distrobox_post_hook
++ when=PostTransaction
++ '[' -z 01_distrobox_post_hook ']'
++ cat
++ for hook in 00_distrobox_pre_hook 01_distrobox_post_hook 02_distrobox_post_hook
++ when=PostTransaction
++ '[' -z 02_distrobox_post_hook ']'
++ cat
++ '[' 1000 -ne 0 ']'
++ printf 'distrobox: Setting up sudo...\n'
+distrobox: Setting up sudo...
++ mkdir -p /etc/sudoers.d
++ grep -q 'Defaults !fqdn' /etc/sudoers.d/sudoers
+grep: /etc/sudoers.d/sudoers: No such file or directory
++ printf 'Defaults !fqdn\n'
++ grep -q '"sonul" ALL = (root) NOPASSWD:ALL' /etc/sudoers.d/sudoers
++ printf '"%s" ALL = (root) NOPASSWD:ALL\n' sonul
+distrobox: Setting up groups...
++ printf 'distrobox: Setting up groups...\n'
++ grep -q '^sonul:' /etc/group
+distrobox: Setting up users...
++ printf 'distrobox: Setting up users...\n'
++ '[' -d /run/host/var/kerberos ']'
+++ printf %s sonul
+++ tr '\\' .
++ grep -q '^sonul:' /etc/passwd
++ '[' '!' -e /etc/passwd.done ']'
++ usermod --home /home/sonul --shell /usr/sbin/zsh --uid 1000 --gid 1000 sonul
++ touch /etc/passwd.done
+++ cat /proc/sys/kernel/random/uuid
++ temporary_password=ae24d299-6096-400e-ad30-fc4d02106f65
++ passwd root
++ printf '%s\n%s\n' ae24d299-6096-400e-ad30-fc4d02106f65 ae24d299-6096-400e-ad30-fc4d02106f65
+New password: Retype new password: passwd: password updated successfully
++ printf %s:%s sonul ae24d299-6096-400e-ad30-fc4d02106f65
++ chpasswd -e
++ printf %s: root
++ chpasswd -e
++ printf %s: sonul
++ chpasswd -e
++ mkdir -p /etc/profile.d
++ printf 'test -z "$USER" && USER="$(id -un 2> /dev/null)"\n'
++ printf 'test -z "$UID"  && readonly  UID="$(id -ur 2> /dev/null)"\n'
++ printf 'test -z "$EUID" && readonly EUID="$(id -u  2> /dev/null)"\n'
++ '[' -n '' ']'
++ printf 'distrobox: Executing init hooks...\n'
+distrobox: Executing init hooks...
++ eval
++ '[' 0 -eq 0 ']'
+container_setup_done
++ printf 'container_setup_done\n'
++ HOST_WATCH='
+		/etc/hosts
+		/etc/localtime
+		/etc/resolv.conf
+	'
++ set +x
+/usr/bin/entrypoint: line 1333: diff: command not found
+/usr/bin/entrypoint: line 1333: diff: command not found
+/usr/bin/entrypoint: line 1333: diff: command not found
+/usr/bin/entrypoint: line 1333: diff: command not found
+/usr/bin/entrypoint: line 1333: diff: command not found
